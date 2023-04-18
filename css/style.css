@@ -1,0 +1,94 @@
+body{
+    background-color:rgb(17, 48, 17);
+}
+.main-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media only screen and (max-width: 580px){
+    .main-body{
+        display:inline;
+    }
+}
+.main-circle{
+    display: grid;
+    grid-template-columns: repeat(1,160px);
+    grid-gap: 50px;
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(75, 121, 75);
+    border-radius: 50%;
+    
+}
+.main-circle .circle .mask,
+.main-circle .circle .fill1,
+.main-circle .circle .fill2,
+.main-circle .circle .fill3{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+.main-circle .circle .mask{
+    clip: rect(0px , 150px , 150px , 75px);
+}
+.mask .fill1{
+    clip:rect(0px , 75px , 150px , 0px);
+    background:conic-gradient(rgb(20, 15, 10) , rgb(99, 44, 13));
+}
+.mask .Full-1,
+.circle .fill1{
+    animation: fill1 ease-in-out 1s;
+    transform: rotate(180deg);
+}
+@keyframes fill1 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(180deg);}
+}
+
+.mask .fill2{
+    clip:rect(0px , 75px , 150px , 0px);
+    background:conic-gradient(rgb(20, 15, 10) , rgb(138, 24, 103));
+}
+.mask .Full-2,
+.circle .fill2{
+    animation: fill1 ease-in-out 1s;
+    transform: rotate(125deg);
+}
+@keyframes fill2 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(125deg);}
+}
+
+.mask .fill3{
+    clip:rect(0px , 75px , 150px , 0px);
+    background:conic-gradient(rgb(20, 15, 10) , rgb(114, 112, 6));
+}
+.mask .Full-3,
+.circle .fill3{
+    animation: fill1 ease-in-out 1s;
+    transform: rotate(110deg);
+}
+@keyframes fill3 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(110deg);}
+}
+.inside-text{
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: black;
+    line-height: 120px;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 13px;
+    z-index: 100;
+    font-size: 25px;
+    font-weight: 600;
+    color:rgb(140, 216, 140) ;
+    text-align: center;
+}
